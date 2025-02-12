@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Handwritten with PDF</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Calibri:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Text to Handwritten Converter</h1>
+        <h2>(Ajay Kumar Jha)</h2>
+        <h5>My Youtube Channel</h5>
+        <a href="https://www.youtube.com/@genuinedoubt2216" target="_blank">Genuine Doubt</a>
+        <textarea id="inputText" rows="4" placeholder="Type your text here..."></textarea>
+        
+        <div class="options">
+            <label for="fontSize">Font Size:</label>
+            <input type="range" id="fontSize" min="10" max="50" value="20">
+
+            <label for="fontSelect">Font Style:</label>
+            <select id="fontSelect">
+                <option value="'Dancing Script', cursive">Dancing Script</option>
+                <option value="Algerian">Algerian</option>
+                <option value="Calibri, sans-serif">Calibri</option>
+                <option value="Arial, sans-serif">Arial</option>
+                <option value="'Courier New', monospace">Courier New</option>
+                <option value="Georgia, serif">Georgia</option>
+                <option value="Verdana, sans-serif">Verdana</option>
+            </select>
+
+            <label for="pageType">Page Background:</label>
+            <select id="pageType">
+                <option value="white">White</option>
+                <option value="lined">Lined Paper</option>
+            </select>
+
+            <label for="textColor">Text Color:</label>
+            <input type="color" id="textColor" value="#000000">
+        </div>
+        
+        <button onclick="convertText()">Convert to Handwriting</button>
+        <button onclick="downloadPDF()">Download as PDF</button>
+        
+        <div id="handwrittenOutput" class="handwritten-output"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
